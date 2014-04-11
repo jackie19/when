@@ -53,7 +53,7 @@
 	"devDependencies": {
 		"curl": "git://github.com/cujojs/curl",
 		"poly": "git://github.com/cujojs/poly",
-		"test-support": "~0.3",
+		"test-support": "cujojs/test-support#update-buster-remove-shrinkwrap",
 		"promises-aplus-tests": "~2",
 		"benchmark": "~1",
 		"microtime": "~0",
@@ -65,10 +65,10 @@
 		"test": "test"
 	},
 	"scripts": {
-		"test": "jshint . && buster test -e node",
+		"test": "jshint . && buster-test -e node",
 		"ci": "npm test && sauceme -b test/browsers.json",
 		"tunnel": "sauceme -m",
-		"start": "buster static -e browser",
+		"start": "buster-static -e browser",
 		"benchmark": "node benchmark/promise && node benchmark/map",
 		"browserify-es6": "browserify -s Promise es6-shim/Promise.browserify-es6.js --no-detect-globals -o es6-shim/Promise.js",
 		"browserify": "browserify -s when build/when.browserify.js --no-detect-globals -o build/when.js",
